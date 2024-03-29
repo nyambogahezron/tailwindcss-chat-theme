@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>chatApp messages</title>
+  </head>
+  <body
+    class="bg-gradient-to-r from-[#656592] to-[#9089fc] flex text-center relative"
+  >
+    <div
+      class="h-full w-[600px] max-h-[615px] min-h-[615px] relative flex top-0 mx-auto text-center justify-center transition bg-[#f7f7f7] border-r-2 rounded-none"
+    >
+      <div class="p-1 w-full left-0 rounded-none">
+        <div>
+          <!-- User section start -->
+          <div
+            class="flex mb-5 shadow-md py-3 px-2 justify-between items-center"
+          >
+            <div class="flex items-center">
+              <img src="./profile-pic.jpg" alt="" class="w-8 rounded-full" />
+              <div class="space-y-0 text-start">
+                <h3 class="mx-2 text-lg text-black font-semibold">name</h3>
+                <h3 class="mx-2 text-slate-500">@username</h3>
+              </div>
+            </div>
+            <a href="logout.php" class="btn-primary">Logout</a>
+          </div>
+          <!-- User section end -->
+          <!-- filter friends area start -->
+          <div class="mb-3 mt-7 px-3">
+            <input
+              type="text"
+              placeholder="Search..."
+              id="searchText"
+              class="inputs h-10"
+            />
+          </div>
+          <!-- filter friends area end -->
+
+          <!-- friend list rendering area -->
+          <div id="chatList" class="overflow-y-auto w-full bg-white relative">
+            <!-- single item -->
+            <div
+              class="px-3 rounded-none mb-3 border-y-[1px] border-slate-200 shadow-md flex items-center"
+            >
+              <img src="./profile-pic.jpg" alt="" class="w-9 rounded-full" />
+              <div class="mx-2 justify-start text-start">
+                <h3 class="text-lg text-black font-semibold">name</h3>
+                <h3 class="text-slate-500">username</h3>
+              </div>
+            </div>
+            <!-- single item ends -->
+            <!-- single item -->
+            <div
+              class="px-3 rounded-none mb-3 border-y-[1px] border-slate-200 shadow-md flex items-center"
+            >
+              <img src="./profile-pic.jpg" alt="" class="w-9 rounded-full" />
+              <div class="mx-2 justify-start text-start">
+                <h3 class="">name</h3>
+                <h3 class="">username</h3>
+              </div>
+            </div>
+            <!-- single item ends -->
+            <!-- single item -->
+            <div
+              class="px-3 rounded-none mb-3 border-y-[1px] border-slate-200 shadow-md flex items-center"
+            >
+              <img src="./profile-pic.jpg" alt="" class="w-9 rounded-full" />
+              <div class="mx-2 justify-start text-start">
+                <h3 class="">name</h3>
+                <h3 class="">username</h3>
+              </div>
+            </div>
+            <!-- single item ends -->
+          </div>
+          <div>add friends icon</div>
+        </div>
+      </div>
+    </div>
+    <!-- Aside section Ends -->
+  </body>
+</html>

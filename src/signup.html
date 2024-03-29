@@ -1,0 +1,134 @@
+<?php require_once "../controllers/authController.php"; ?>
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>VottingApp</title>
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body
+    class="bg-gradient-to-r from-[#656592] to-[#9089fc]  h-screen text-center justify-center bg-center bg-cover font-sans flex"
+  >
+    <div
+      class="top-5 my-5 rounded-lg container h-[800px] relative w-[450px] bg-white px-10 shadow-lg"
+    >
+      <header
+        class="mt-0 text-4xl font-serif flex flex-col py-6 text-center justify-center"
+      >
+        <img
+          class="mx-auto"
+          src="https://logowik.com/content/uploads/images/chat3893.logowik.com.webp"
+          alt=""
+          srcset=""
+          width="140px"
+        />
+
+        <div class="mt-4 text-blue-700">QuickChat</div>
+      </header>
+      <form action="register.php" method="POST" id="reg-form" class="">
+        <div class="flex gap-2">
+          <div
+            class="flex input-field w-1/2 input-field my-6 mx-0 relative h-12"
+          >
+            <input class="inputs" type="text" name="firstName" required />
+            <label class="input-label">First Name</label>
+          </div>
+          <div
+            class="flex input-field w-1/2 input-field my-6 mx-0 relative h-12"
+          >
+            <input class="inputs" type="text" name="lastName" required />
+            <label class="input-label">Last Name</label>
+          </div>
+        </div>
+        <div class="my-6 mx-0 relative w-full h-12">
+          <input class="inputs" type="text" name="userName" required />
+          <label class="input-label">User Name</label>
+        </div>
+        <div class="mt-2 input-field my-6 mx-0 relative w-full h-12">
+          <input class="inputs" type="text" name="userEmail" required />
+          <label class="input-label">Email</label>
+        </div>
+        <div class="mt-2 input-field my-6 mx-0 relative w-full h-12">
+          <input
+            class="inputs block w-full text-sm text-slate-500
+      file:mr-4 file:py-2 file:px-4
+      file:rounded-full file:border-0
+      file:text-sm file:font-semibold
+      file:bg-violet-50 file:text-violet-700
+      hover:file:bg-violet-100"
+            placeholder="choose image"
+            type="file"
+            name="userImage"
+            accept="image/x-png,image/gif,image/jpeg,image/jpg"
+          />
+        </div>
+
+        <div class="input-field my-6 mx-0 relative w-full h-12">
+          <input
+            class="userPassword inputs"
+            type="password"
+            name="userPassword"
+            required
+          />
+          <span class="absolute top-1/3 translate-y--1/2 right-5 text-black text-sm font-bold show invisible font-sans cursor-pointer select-none">SHOW</span>
+          <label class="input-label">Password</label>
+        </div>
+        <div class="input-field my-6 mx-0 relative w-full h-12">
+          <input
+            class="confirmUserPassword inputs"
+            type="password"
+            name="confirmUserPassword"
+            required
+          />
+          <label class="input-label">Confirm Password</label>
+        </div>
+        <div class="button">
+           <button class="bg-blue-400 w-full mx-auto mt-2 py-3 px-5 text-center" type="submit" name="signUpUser">Sign Up</button>
+        </div>
+      </form>
+
+
+      <div class="mt-8 font-sans flex space-x-1">
+        <div class="text-black"> Have Account?</div>
+        <a
+          class="text-blue-400 transition-all no-underline hover:underline"
+          href="login.html"
+          >Login Now</a
+        >
+      </div>
+
+    <script>
+      var input = $('.userPassword');
+      var show = document.querySelector('.show');
+      show.addEventListener('click', active);
+      function active() {
+        if (input.type === 'password') {
+          input.type = 'text';
+
+          show.style.color = '#1DA1F2';
+          show.textContent = 'HIDE';
+        } else {
+          input.type = 'password';
+          show.textContent = 'SHOW';
+          show.style.color = '#111';
+        }
+      }
+      const pswrdField = document.querySelector(".form input[type='password']"),
+        toggleIcon = document.querySelector('.form .field i');
+
+      toggleIcon.onclick = () => {
+        if (pswrdField.type === 'password') {
+          pswrdField.type = 'text';
+        } else {
+          pswrdField.type = 'password';
+          toggleIcon.classList.remove('active');
+        }
+      };
+    </script>
+  </body>
+</html>

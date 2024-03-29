@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>chatApp messages</title>
+  </head>
+
+  <body
+    class="w-screen h-screen bg-gradient-to-r from-[#656592] to-[#9089fc] flex text-center relative"
+  >
+    <div
+      class="mx-auto text-center flex justify-center h-screen overflow-y-hidden rounded-none"
+    >
+      <!-- Messages body -->
+      <div class="w-[600px] h-full flex mx-auto rounded-none">
+        <div>
+          <div class="">
+            <header
+              class="w-[600px] flex relative text-center py-1 px-2 bg-white rounded-none border-b-2"
+            >
+              <!-- Message header  -->
+              <a href="users.php" class="back-icon"
+                >Back<i class="fas fa-arrow-left"></i
+              ></a>
+              <img src="./profile-pic.jpg" alt="" class="img rounded-full" />
+              <div class="">
+                <span class="text-lg">name</span>
+                <p>status</p>
+              </div>
+              <!-- Message header ends -->
+            </header>
+          </div>
+          <div class="w-full bg-[#f7f7f7] rounded-none">
+            <div
+              class="chat-box min-h-[460px] max-h-[460px] overflow-y-auto px-3 pt-3"
+            >
+              chat box
+            </div>
+            <form action="#" class="typing-area">
+              <input
+                type="text"
+                class="incoming_id"
+                name="incoming_id"
+                hidden
+              />
+              <input
+                type="text"
+                name="message shadow-md"
+                class="input-field"
+                placeholder="Type a message here..."
+                autocomplete="off"
+              />
+              <button><i class="fab fa-telegram-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Message body end -->
+    </div>
+  </body>
+</html>

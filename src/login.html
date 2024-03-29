@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>chatApp</title>
+
+    <link rel="stylesheet" href="./main.css" />
+    <!-- <link rel="stylesheet" href="../assets/css/index.css"> -->
+  </head>
+
+  <body
+    class="bg-gradient-to-r from-[#656592] to-[#9089fc] h-screen text-center justify-center bg-center bg-cover font-sans flex"
+  >
+    <div
+      class="top-5 my-5 rounded-lg container h-[600px] relative w-[420px] bg-white px-10 shadow-lg overflow-hidden"
+    >
+      <header
+        class="mt-0 text-4xl font-serif flex flex-col py-6 text-center justify-center"
+      >
+        <img
+          class="mx-auto"
+          src="https://logowik.com/content/uploads/images/chat3893.logowik.com.webp"
+          alt=""
+          srcset=""
+          width="140px"
+        />
+
+        <div class="mt-4 text-blue-700">QuickChat</div>
+      </header>
+      <form action="" method="post">
+        <div class="input-field my-4 mx-0 relative w-full h-12">
+          <input class="inputs peer" type="text" name="user_name" required />
+          <label
+            class="input-label after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+            >Email or Username</label
+          >
+        </div>
+        <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+          Please provide a valid email address.
+        </p>
+        <div class="input-field my-4 mx-0 relative w-full h-12">
+          <input
+            class="pswrd inputs"
+            type="password"
+            name="user_password"
+            required
+          />
+          <span
+            class="absolute top-1/3 translate-y--1/2 right-5 text-black text-sm font-bold show invisible font-sans cursor-pointer select-none"
+            >SHOW</span
+          >
+          <label
+            class="input-label after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+            >Password</label
+          >
+        </div>
+        <div
+          class="overflow-hidden mt-8 text-[16px] z-[111] my-6 mx-0 relative w-full h-12"
+        >
+          <button
+            class="bg-blue-400 w-full mx-auto mt-3 py-3 px-5 text-center"
+            type="submit"
+            name="login_user"
+          >
+            LOGIN
+          </button>
+        </div>
+      </form>
+      <div>
+        <button class="bg-blue-400 w-full mx-auto mt-3 py-3 px-5 text-center">
+          <a href="#">Forgot Password or User Name</a>
+        </button>
+      </div>
+
+      <div class="mt-8 font-sans flex space-x-1">
+        <div class="text-black">Don't Have Account?</div>
+        <a
+          class="text-blue-400 transition-all no-underline hover:underline"
+          href="signup.html"
+          >Sign-up now</a
+        >
+      </div>
+    </div>
+    <script>
+      var input = document.querySelector('.pswrd');
+      var show = document.querySelector('.show');
+      show.addEventListener('click', active);
+      function active() {
+        if (input.type === 'password') {
+          input.type = 'text';
+          show.style.color = '#1DA1F2';
+          show.textContent = 'HIDE';
+        } else {
+          input.type = 'password';
+          show.textContent = 'SHOW';
+          show.style.color = '#111';
+        }
+      }
+    </script>
+  </body>
+</html>

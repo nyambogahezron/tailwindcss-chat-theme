@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickChat - friends</title>
+    <script src="../assets/js/jquery-3.7.0.min.js"></script>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body
+    class="bg-gradient-to-r from-[#656592] to-[#9089fc] flex text-center relative"
+  >
+    <div class="container mx-auto mt-3">
+      <header class="w-full h-12 text-center space-x-5 flex flex-row baseline">
+        <div class="h-full">
+          <button
+            class="bg-white w-full mx-auto py-2 px-5 text-center"
+            type="submit"
+          >
+            Menu
+          </button>
+        </div>
+
+        <div class="w-full">
+          <form action="">
+            <div class="flex flex-row h-full space-x-1">
+              <div class="w-full">
+                <input
+                  class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                  type="search"
+                  placeholder="Search For A Friend"
+                  name="search"
+                  id="search"
+                />
+              </div>
+              <div class="h-full">
+                <button
+                  class="bg-white w-full mx-auto py-2 px-5 text-center"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </header>
+      <main class="container mt-3 mx-auto text-center">
+        <div class="grid gap-2 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+          <article class="w-full grow">
+            <div
+              class="max-w-sm mx-auto bg-white rounded-xl shadow-xl space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6"
+            >
+              <img
+                class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
+                src="./profile-pic.jpg"
+                alt="Woman's Face"
+              />
+              <div class="text-center space-y-2 sm:text-left">
+                <div class="space-y-0.5">
+                  <p class="text-lg text-black font-semibold">Erin Lindford</p>
+                  <p class="text-slate-500 font-medium">@user_name</p>
+                </div>
+                <button class="btn-primary">Message</button>
+                <button
+                  class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                >
+                  Add Friends
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="w-full grow">
+            <div
+              class="max-w-sm mx-auto bg-white rounded-xl shadow-xl space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6"
+            >
+              <img
+                class="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0"
+                src="./profile-pic.jpg"
+                alt="Woman's Face"
+              />
+              <div class="text-center space-y-2 sm:text-left">
+                <div class="space-y-0.5">
+                  <p class="text-lg text-black font-semibold">Erin Lindford</p>
+                  <p class="text-slate-500 font-medium">@user_name</p>
+                </div>
+                <button
+                  class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                >
+                  Message
+                </button>
+                <button
+                  class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                >
+                  You Are Friends
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
